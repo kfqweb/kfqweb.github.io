@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="一、新增标签nav ： 导航 header ： 头部 section ： 文档中的区段，如章节、页眉、页脚或文档中的其他部分。 aside ： 标签定义其所处内容之外的内容。  article ：元素的潜在来源：  论坛帖子 报纸文章 博客条目 用户评论  ： 一篇文章应有其自身的意义，应该有可能独立于站点的其余部分对其进行分发。 footer： 页脚         二、表单输入类型123456">
+<meta property="og:type" content="article">
+<meta property="og:title" content="03、H5新增，属性方法，标签">
+<meta property="og:url" content="http://yoursite.com/2018/12/06/03-无主题/index.html">
+<meta property="og:site_name" content="小白的学习方式">
+<meta property="og:description" content="一、新增标签nav ： 导航 header ： 头部 section ： 文档中的区段，如章节、页眉、页脚或文档中的其他部分。 aside ： 标签定义其所处内容之外的内容。  article ：元素的潜在来源：  论坛帖子 报纸文章 博客条目 用户评论  ： 一篇文章应有其自身的意义，应该有可能独立于站点的其余部分对其进行分发。 footer： 页脚         二、表单输入类型123456">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-07T13:22:03.268Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="03、H5新增，属性方法，标签">
+<meta name="twitter:description" content="一、新增标签nav ： 导航 header ： 头部 section ： 文档中的区段，如章节、页眉、页脚或文档中的其他部分。 aside ： 标签定义其所处内容之外的内容。  article ：元素的潜在来源：  论坛帖子 报纸文章 博客条目 用户评论  ： 一篇文章应有其自身的意义，应该有可能独立于站点的其余部分对其进行分发。 footer： 页脚         二、表单输入类型123456">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/12/06/03-无主题/">
+
+
+
+
+
+  <title>03、H5新增，属性方法，标签 | 小白的学习方式</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小白的学习方式</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/06/03-无主题/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="孔凡奇">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小白的学习方式">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">03、H5新增，属性方法，标签</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-06T10:34:34+08:00">
+                2018-12-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="一、新增标签"><a href="#一、新增标签" class="headerlink" title="一、新增标签"></a>一、新增标签</h4><p>nav ： 导航</p>
+<p>header ： 头部</p>
+<p>section ： 文档中的区段，如章节、页眉、页脚或文档中的其他部分。</p>
+<p>aside ： 标签定义其所处内容之外的内容。</p>
+<p> article ：元素的潜在来源：</p>
+<ul>
+<li>论坛帖子</li>
+<li>报纸文章</li>
+<li>博客条目</li>
+<li>用户评论</li>
+</ul>
+<p>： 一篇文章应有其自身的意义，应该有可能独立于站点的其余部分对其进行分发。</p>
+<p>footer： 页脚        </p>
+<h4 id="二、表单输入类型"><a href="#二、表单输入类型" class="headerlink" title="二、表单输入类型"></a>二、表单输入类型</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 文本 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 密码 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 重置 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"reset"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 提交 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 复选 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 单选 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 按钮 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 图片 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"image"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 文件上传 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 隐藏域 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 搜索 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"search"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 邮箱 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 地址 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"url"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 数值 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 电话 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"tel"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 详细时间 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"datetime-local"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 日期 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"date"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 月份 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"month"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 周 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"week"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 时间 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"time"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 颜色 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"color"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>带有 datalist 的表单：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"#"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">list</span>=<span class="string">"lang"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">datalist</span> <span class="attr">id</span>=<span class="string">"lang"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"javascript"</span>&gt;</span>javascript<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"java"</span>&gt;</span>java<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"c#"</span>&gt;</span>c#<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"c++"</span>&gt;</span>c++<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">datalist</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--1. 自动填充功能   autocomplete=&quot;on(填充)|off（不填充）&quot; --&gt;</span><br><span class="line">&lt;!--2. 忽略H5提供的校验  novalidate --&gt;</span><br><span class="line">&lt;!--3. H5校验必填功能  required --&gt;</span><br><span class="line">&lt;form action=&quot;#&quot; autocomplete=&quot;off&quot; novalidate&gt;</span><br><span class="line">    &lt;input type=&quot;email&quot; name=&quot;username&quot; required&gt;</span><br><span class="line">    &lt;input type=&quot;password&quot; name=&quot;password&quot; required&gt;</span><br><span class="line">    &lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="三、H5新增操作类名方法："><a href="#三、H5新增操作类名方法：" class="headerlink" title="三、H5新增操作类名方法："></a>三、H5新增操作类名方法：</h4><p><strong>原 js 操作类名 ：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setAttribute(<span class="string">'class'</span>,<span class="string">'box'</span>);</span><br><span class="line">className = <span class="string">'cennter'</span>;</span><br><span class="line">	需要匹配之前是否有别的类名  不方便操作。</span><br></pre></td></tr></table></figure>
+<p><strong>HTML5 新增方法：</strong></p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>el.classList</td>
+<td>描述元素上所有的类名信息对象 value指得是class属性的值。<br>返回的一组值。它和 JavaScript <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Array" target="_blank" rel="noopener"><code>Array</code></a> 对象一样，索引从 0 开始。<code>DOMTokenList</code> 总是区分大小写</td>
+</tr>
+<tr>
+<td>el.classList.add( String [, String] )</td>
+<td>添加指定的类值。如果这些类已经存在于元素的属性中，那么它们将被忽略。</td>
+</tr>
+<tr>
+<td>el.classList.remove( String [,String] )</td>
+<td>删除指定的类值。</td>
+</tr>
+<tr>
+<td>el.classList.<strong>item</strong> ( Number )</td>
+<td>按集合中的索引返回类值。<br><strong>如果索引值大于等于符号列表的长度（length），则返回 undefined 或 null，在 Gecko 7.0 之前的版本中返回 null。</strong></td>
+</tr>
+<tr>
+<td>el.classList.<strong>toggle</strong> ( String [, force] )</td>
+<td>当只有一个参数时：切换 class value; <br>也就是：如果类存在，则删除它并返回<code>false</code>，如果不存在，则添加它并返回<code>true</code>。<br>当存在第二个参数时：如果第二个参数的计算结果为true，则添加指定的类值，如果计算结果为false，则删除它</td>
+</tr>
+<tr>
+<td>el.classList.contains( String )</td>
+<td>检查元素的类属性中是否存在指定的类值。返回布尔值，true 存在 false 不存在</td>
+</tr>
+<tr>
+<td>el.classList.replace( oldClass, newClass )</td>
+<td>用一个新类替换已有类。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>自定义属性：</strong></p>
+<p>以    [data- ]  开头 用于存储信息，并且提供了一套 操作方法。</p>
+<p>用法：</p>
+<table>
+<thead>
+<tr>
+<th>位置</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>写在HTML 结构上data-age</td>
+<td>添加自定义属性age</td>
+</tr>
+<tr>
+<td>js: el.dataset.name=value</td>
+<td>给 el 元素 增加属性为 name 的 值 为 value</td>
+</tr>
+</tbody>
+</table>
+<p>dataset  API 用法 ：</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>el.dataset.attr = value</td>
+<td>给 el 元素 增加 data-attr 属性  值 为 value</td>
+</tr>
+<tr>
+<td>el.dataset.attr = abc</td>
+<td>修改el元素的 data-attr 属性值为 abc</td>
+</tr>
+<tr>
+<td>var datas = el.dataset.attr</td>
+<td>获取属性为 data-attr 的</td>
+</tr>
+</tbody>
+</table>
+<p><strong>全屏 api </strong></p>
+<p><code>Element.requestFullscreen()</code> 方法用于发出异步请求使元素进入全屏模式。</p>
+<p>兼容性较差，如果想要使用，请认证考虑下兼容性.</p>
+<p>私有前缀：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">不同浏览器不同的私有前缀：</span><br><span class="line">谷歌，safari     webkit</span><br><span class="line">火狐             moz</span><br><span class="line">欧朋             o</span><br><span class="line">IE               ms</span><br><span class="line"></span><br><span class="line">前缀解决的是  新特性  刚刚出现后的浏览器支持</span><br><span class="line"></span><br><span class="line">js: 需要判断是否存在函数  然后去调用  加上私有前缀  私有前缀+函数名称|属性名称</span><br><span class="line">css: 加上其他类型的属性  需要带上私有前缀  -私有前缀- +属性名称</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        html:-moz-full-screen &#123;</span><br><span class="line">            background: pink;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        html:-webkit-full-screen &#123;</span><br><span class="line">            background: pink;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        html:fullscreen &#123;</span><br><span class="line">            background: pink;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;button onclick=&quot;launchFullScreen()&quot;&gt;进入全屏&lt;/button&gt;</span><br><span class="line">    &lt;input /&gt;</span><br><span class="line">    &lt;button onclick=&quot;exitFullscreen()&quot;&gt;退出全屏&lt;/button&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        // 封装函数 找到是否兼容 </span><br><span class="line">        function launchFullScreen(element) &#123;</span><br><span class="line">            var element = element || document.documentElement;</span><br><span class="line">            if (element.requestFullscreen) &#123;</span><br><span class="line">                element.requestFullscreen();</span><br><span class="line">            &#125; else if (element.mozRequestFullScreen) &#123;</span><br><span class="line">                element.mozRequestFullScreen();</span><br><span class="line">            &#125; else if (element.webkitRequestFullscreen) &#123;</span><br><span class="line">                element.webkitRequestFullscreen();</span><br><span class="line">            &#125; else if (element.msRequestFullscreen) &#123;</span><br><span class="line">                element.msRequestFullscreen();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        //离开全屏模式</span><br><span class="line">        function exitFullscreen() &#123;</span><br><span class="line">            if (document.exitFullscreen) &#123;</span><br><span class="line">                document.exitFullscreen();</span><br><span class="line">            &#125; else if (document.mozExitFullScreen) &#123;</span><br><span class="line">                document.mozExitFullScreen();</span><br><span class="line">            &#125; else if (document.webkitExitFullscreen) &#123;</span><br><span class="line">                document.webkitExitFullscreen();</span><br><span class="line">            &#125; else if (document.msExitFullscreen) &#123;</span><br><span class="line">                document.msExitFullscreen();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        element.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);//全屏状态允许键盘输入  </span><br><span class="line">        // 正常写法</span><br><span class="line">        document.addEventListener(&quot;fullscreenchange&quot;, function () &#123;</span><br><span class="line">            fullscreenState.innerHTML = (document.fullscreen) ? &quot;&quot; : &quot;not &quot;;</span><br><span class="line">        &#125;, false);</span><br><span class="line">        // 兼容火狐</span><br><span class="line">        document.addEventListener(&quot;mozfullscreenchange&quot;, function () &#123;</span><br><span class="line">            fullscreenState.innerHTML = (document.mozFullScreen) ? &quot;&quot; : &quot;not &quot;;</span><br><span class="line">        &#125;, false);</span><br><span class="line">        // 兼容谷歌和 safari</span><br><span class="line">      document.addEventListener(&quot;webkitfullscreenchange&quot;, function () &#123;</span><br><span class="line">            fullscreenState.innerHTML = (document.webkitIsFullScreen) ? &quot;&quot; : &quot;not &quot;;</span><br><span class="line">        &#125;, false);</span><br><span class="line">        // 兼容ie</span><br><span class="line">        document.addEventListener(&quot;msfullscreenchange&quot;, function () &#123;</span><br><span class="line">            fullscreenState.innerHTML = (document.msIsFullScreen) ? &quot;&quot; : &quot;not &quot;;</span><br><span class="line">        &#125;, false);</span><br><span class="line"></span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="四、播放器"><a href="#四、播放器" class="headerlink" title="四、播放器"></a>四、播放器</h4><p>audio ： 音频</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>autoplay</td>
+<td>autoplay</td>
+<td>如果出现该属性，则音频在就绪后马上播放。</td>
+</tr>
+<tr>
+<td>controls</td>
+<td>controls</td>
+<td>如果出现该属性，则向用户显示控件，比如播放按钮。</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>loop</td>
+<td>如果出现该属性，则每当音频结束时重新开始播放。</td>
+</tr>
+<tr>
+<td>muted</td>
+<td>muted</td>
+<td>规定视频输出应该被静音。</td>
+</tr>
+<tr>
+<td>preload</td>
+<td>preload</td>
+<td>如果出现该属性，则音频在页面加载时进行加载，并预备播放。<br>如果使用 “autoplay”，则忽略该属性</td>
+</tr>
+<tr>
+<td>src</td>
+<td><em>url</em></td>
+<td>要播放的音频的 URL。</td>
+</tr>
+<tr>
+<td>支持音频格式</td>
+<td>元素支持三种音频格式文件:</td>
+<td>MP3, Wav, 和 Ogg</td>
+</tr>
+</tbody>
+</table>
+<p>video ： 视频</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>autoplay</td>
+<td>autoplay</td>
+<td>如果出现该属性，则视频在就绪后马上播放。</td>
+</tr>
+<tr>
+<td>controls</td>
+<td>controls</td>
+<td>如果出现该属性，则向用户显示控件，比如播放按钮。</td>
+</tr>
+<tr>
+<td>height</td>
+<td><em>pixels</em></td>
+<td>设置视频播放器的高度。</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>loop</td>
+<td>如果出现该属性，则当媒介文件完成播放后再次开始播放。</td>
+</tr>
+<tr>
+<td>muted</td>
+<td>muted</td>
+<td>规定视频的音频输出应该被静音。</td>
+</tr>
+<tr>
+<td>poster</td>
+<td><em>URL</em></td>
+<td>规定视频下载时显示的图像，或者在用户点击播放按钮前显示的图像。</td>
+</tr>
+<tr>
+<td>preload</td>
+<td>preload</td>
+<td>如果出现该属性，则视频在页面加载时进行加载，并预备播放。<br>如果使用 “autoplay”，则忽略该属性。</td>
+</tr>
+<tr>
+<td>src</td>
+<td><em>url</em></td>
+<td>要播放的视频的 URL。</td>
+</tr>
+<tr>
+<td>width</td>
+<td>pixels</td>
+<td>设置视频播放器的宽度。</td>
+</tr>
+<tr>
+<td>video</td>
+<td>元素支持三种视频格式：</td>
+<td>MP4, WebM, 和 Ogg;</td>
+</tr>
+</tbody>
+</table>
+<p>MP4 :带有 H.264 视频编码和 AAC 音频编码的 MPEG 4 文件</p>
+<p>WebM : 带有 VP8 视频编码和 Vorbis 音频编码的 WebM 文件</p>
+<p>Ogg :  带有 Theora 视频编码和 Vorbis 音频编码的 Ogg 文件</p>
+<p><strong>方法：</strong></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/06/02-图片资源链接加入文档/" rel="next" title="02、图片资源链接加入文档">
+                <i class="fa fa-chevron-left"></i> 02、图片资源链接加入文档
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/06/04-css之高度自适应/" rel="prev" title="04、css之高度自适应">
+                04、css之高度自适应 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">孔凡奇</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、新增标签"><span class="nav-number">1.</span> <span class="nav-text">一、新增标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、表单输入类型"><span class="nav-number">2.</span> <span class="nav-text">二、表单输入类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三、H5新增操作类名方法："><span class="nav-number">3.</span> <span class="nav-text">三、H5新增操作类名方法：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四、播放器"><span class="nav-number">4.</span> <span class="nav-text">四、播放器</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">孔凡奇</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
