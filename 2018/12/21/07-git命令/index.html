@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="命令行窗口操作电脑的两种方式：图形界面、命令行窗口。  我们平时都是通过图形界面来操作计算机，比如鼠标右键-&amp;gt;新建-&amp;gt;新建文件夹。 其实命令行窗口也是一种操作向计算机的方式。 开启命令行 win + R -&amp;gt; cmd -&amp;gt; enter 常用命令行工具 cmd powershell git bash    常用命令 pwd (print working directory)">
+<meta name="description" content="命令行窗口操作电脑的两种方式：图形界面、命令行窗口。  我们平时都是通过图形界面来操作计算机，比如鼠标右键-&amp;gt;新建-&amp;gt;新建文件夹。 其实命令行窗口也是一种操作向计算机的方式。 开启命令行 win + R -&amp;gt; cmd -&amp;gt; enter 常用命令行工具 cmd    7 8  powershell 可能不是管理员的 git bash     常用命令 pwd (print w">
 <meta property="og:type" content="article">
 <meta property="og:title" content="07、git命令">
 <meta property="og:url" content="http://yoursite.com/2018/12/21/07-git命令/index.html">
 <meta property="og:site_name" content="小白的学习方式">
-<meta property="og:description" content="命令行窗口操作电脑的两种方式：图形界面、命令行窗口。  我们平时都是通过图形界面来操作计算机，比如鼠标右键-&amp;gt;新建-&amp;gt;新建文件夹。 其实命令行窗口也是一种操作向计算机的方式。 开启命令行 win + R -&amp;gt; cmd -&amp;gt; enter 常用命令行工具 cmd powershell git bash    常用命令 pwd (print working directory)">
+<meta property="og:description" content="命令行窗口操作电脑的两种方式：图形界面、命令行窗口。  我们平时都是通过图形界面来操作计算机，比如鼠标右键-&amp;gt;新建-&amp;gt;新建文件夹。 其实命令行窗口也是一种操作向计算机的方式。 开启命令行 win + R -&amp;gt; cmd -&amp;gt; enter 常用命令行工具 cmd    7 8  powershell 可能不是管理员的 git bash     常用命令 pwd (print w">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-21T03:26:33.758Z">
+<meta property="og:updated_time" content="2019-07-19T08:51:34.549Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="07、git命令">
-<meta name="twitter:description" content="命令行窗口操作电脑的两种方式：图形界面、命令行窗口。  我们平时都是通过图形界面来操作计算机，比如鼠标右键-&amp;gt;新建-&amp;gt;新建文件夹。 其实命令行窗口也是一种操作向计算机的方式。 开启命令行 win + R -&amp;gt; cmd -&amp;gt; enter 常用命令行工具 cmd powershell git bash    常用命令 pwd (print working directory)">
+<meta name="twitter:description" content="命令行窗口操作电脑的两种方式：图形界面、命令行窗口。  我们平时都是通过图形界面来操作计算机，比如鼠标右键-&amp;gt;新建-&amp;gt;新建文件夹。 其实命令行窗口也是一种操作向计算机的方式。 开启命令行 win + R -&amp;gt; cmd -&amp;gt; enter 常用命令行工具 cmd    7 8  powershell 可能不是管理员的 git bash     常用命令 pwd (print w">
 
 
 
@@ -305,16 +305,16 @@
 <li>其实命令行窗口也是一种操作向计算机的方式。</li>
 <li>开启命令行 win + R -&gt; cmd -&gt; enter</li>
 <li>常用命令行工具<ul>
-<li>cmd</li>
-<li>powershell</li>
-<li>git bash</li>
+<li>cmd    7 8 </li>
+<li>powershell 可能不是管理员的</li>
+<li>git bash </li>
 </ul>
 </li>
 </ul>
 <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
 <li>pwd (print working directory) 查看当前所在的目录</li>
 <li>cd (change directory) 切换目录</li>
-<li>clear 清屏</li>
+<li>clear  OR  cls 清屏</li>
 <li>ctrl + l 清屏</li>
 <li>ls (list) 查看当前目录下的内容</li>
 <li>mkdir (make directory) 创建目录</li>
@@ -431,7 +431,10 @@
 </ul>
 </li>
 <li>创建分支<ul>
-<li>git branch 分支名称</li>
+<li>git branch 分支名称<ul>
+<li>dev-。。。</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>切换分支<ul>
@@ -487,11 +490,12 @@
 </ul>
 </li>
 <li>从远程仓库获取代码(拉取所有版本到本地)<ul>
+<li>权限 =&gt; 账号 、 密码 开通权限  =&gt; push  </li>
 <li>git clone 远程仓库地址 项目名称 </li>
 <li>使用场景：加入到已有项目的开发中 需要先拉取所有版本到本地 再进行开发</li>
 </ul>
 </li>
-<li>冲突修复<ul>
+<li>冲突修复  <ul>
 <li>创建公共仓库</li>
 <li>创建A并向公共仓库中提交一次代码</li>
 <li>创建B并拉取公共仓库中的代码</li>
@@ -509,7 +513,7 @@
 </ul>
 </li>
 <li>多人协作开发免登录操作 ssh-keygen</li>
-<li>.gitignore忽略清单</li>
+<li>.gitignore忽略清</li>
 </ul>
 
       
@@ -626,7 +630,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
